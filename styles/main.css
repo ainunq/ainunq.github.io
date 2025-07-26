@@ -1,22 +1,35 @@
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
-    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
-    color: #22223b;
+    background: linear-gradient(135deg, #b3e0ff 0%, #e0f7fa 100%);
+    color: #03396c;
 }
 
 header {
-    background: #4f46e5;
+    background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%);
     color: #fff;
     padding: 2rem 0 1rem 0;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(79,70,229,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0; right: 0; bottom: -20px; height: 40px;
+    background: url('https://svgshare.com/i/12pG.svg') repeat-x;
+    background-size: contain;
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 header h1 {
     margin: 0 0 0.5rem 0;
     font-size: 2.5rem;
     letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(33,147,176,0.2);
 }
 
 nav ul {
@@ -36,20 +49,21 @@ nav a {
 }
 
 nav a:hover {
-    color: #a5b4fc;
+    color: #b3e0ff;
 }
 
 section {
     max-width: 700px;
     margin: 2rem auto;
-    background: #fff;
+    background: rgba(255,255,255,0.85);
     border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(79,70,229,0.07);
+    box-shadow: 0 4px 24px rgba(33,147,176,0.07);
     padding: 2rem;
+    border: 1px solid #b3e0ff;
 }
 
 h2 {
-    color: #4f46e5;
+    color: #2193b0;
     margin-top: 0;
 }
 
@@ -66,15 +80,20 @@ form {
 
 input, textarea {
     padding: 0.7rem;
-    border: 1px solid #c7d2fe;
+    border: 1px solid #6dd5ed;
     border-radius: 8px;
     font-size: 1rem;
-    background: #f1f5f9;
+    background: #e0f7fa;
     resize: vertical;
 }
 
+input:focus, textarea:focus {
+    outline: 2px solid #2193b0;
+    background: #b3e0ff;
+}
+
 button[type="submit"] {
-    background: #4f46e5;
+    background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%);
     color: #fff;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -82,20 +101,23 @@ button[type="submit"] {
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(33,147,176,0.1);
 }
 
 button[type="submit"]:hover {
-    background: #3730a3;
+    background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
+    transform: translateY(-2px) scale(1.03);
 }
 
 footer {
     text-align: center;
     padding: 1.5rem 0;
-    background: #e0e7ff;
-    color: #4f46e5;
+    background: linear-gradient(90deg, #b3e0ff 0%, #e0f7fa 100%);
+    color: #2193b0;
     margin-top: 2rem;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     font-size: 1rem;
+    box-shadow: 0 -2px 8px rgba(33,147,176,0.07);
 }
