@@ -1,35 +1,26 @@
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Noto Sans JP', 'Segoe UI', Arial, sans-serif;
     margin: 0;
-    background: linear-gradient(135deg, #b3e0ff 0%, #e0f7fa 100%);
-    color: #03396c;
+    background: linear-gradient(135deg, #fff7f0 0%, #ffe4ec 100%);
+    color: #4b2e2b;
 }
 
 header {
-    background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%);
+    background: linear-gradient(90deg, #e43a47 0%, #f9d6d5 100%);
     color: #fff;
     padding: 2rem 0 1rem 0;
     text-align: center;
     position: relative;
     overflow: hidden;
-}
-
-header::after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0; right: 0; bottom: -20px; height: 40px;
-    background: url('https://svgshare.com/i/12pG.svg') repeat-x;
-    background-size: contain;
-    opacity: 0.5;
-    pointer-events: none;
+    border-bottom: 6px solid #f7cac9;
 }
 
 header h1 {
     margin: 0 0 0.5rem 0;
     font-size: 2.5rem;
     letter-spacing: 2px;
-    text-shadow: 0 2px 8px rgba(33,147,176,0.2);
+    font-family: 'Noto Serif JP', serif;
+    text-shadow: 0 2px 8px rgba(228,58,71,0.08);
 }
 
 nav ul {
@@ -45,31 +36,63 @@ nav a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
+    font-family: 'Noto Sans JP', Arial, sans-serif;
     transition: color 0.2s;
 }
 
 nav a:hover {
-    color: #b3e0ff;
+    color: #e43a47;
+    background: #fff;
+    border-radius: 8px;
+    padding: 0.2rem 0.7rem;
 }
 
 section {
     max-width: 700px;
     margin: 2rem auto;
-    background: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.92);
     border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(33,147,176,0.07);
+    box-shadow: 0 4px 24px rgba(228,58,71,0.07);
     padding: 2rem;
-    border: 1px solid #b3e0ff;
+    border: 1.5px solid #f7cac9;
 }
 
 h2 {
-    color: #2193b0;
+    color: #e43a47;
     margin-top: 0;
+    font-family: 'Noto Serif JP', serif;
 }
 
 #portfolio p, #about p {
     font-size: 1.1rem;
     line-height: 1.7;
+}
+
+.ocean-objects {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 1.5rem;
+}
+
+.ocean-objects svg {
+    transition: transform 0.3s;
+    filter: drop-shadow(0 2px 8px #f7cac9);
+}
+.ocean-objects svg:hover {
+    transform: scale(1.1) rotate(-5deg);
+    filter: drop-shadow(0 4px 16px #e43a47);
+}
+
+/* Sakura blossom */
+.sakura {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+    opacity: 0.7;
+    z-index: 10;
 }
 
 form {
@@ -80,20 +103,20 @@ form {
 
 input, textarea {
     padding: 0.7rem;
-    border: 1px solid #6dd5ed;
+    border: 1px solid #f7cac9;
     border-radius: 8px;
     font-size: 1rem;
-    background: #e0f7fa;
+    background: #fff7f0;
     resize: vertical;
 }
 
 input:focus, textarea:focus {
-    outline: 2px solid #2193b0;
-    background: #b3e0ff;
+    outline: 2px solid #e43a47;
+    background: #ffe4ec;
 }
 
 button[type="submit"] {
-    background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%);
+    background: linear-gradient(90deg, #e43a47 0%, #f7cac9 100%);
     color: #fff;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -102,22 +125,22 @@ button[type="submit"] {
     font-weight: bold;
     cursor: pointer;
     transition: background 0.2s, transform 0.2s;
-    box-shadow: 0 2px 8px rgba(33,147,176,0.1);
+    box-shadow: 0 2px 8px rgba(228,58,71,0.1);
 }
 
 button[type="submit"]:hover {
-    background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
+    background: linear-gradient(90deg, #f7cac9 0%, #e43a47 100%);
     transform: translateY(-2px) scale(1.03);
 }
 
 footer {
     text-align: center;
     padding: 1.5rem 0;
-    background: linear-gradient(90deg, #b3e0ff 0%, #e0f7fa 100%);
-    color: #2193b0;
+    background: linear-gradient(90deg, #ffe4ec 0%, #fff7f0 100%);
+    color: #e43a47;
     margin-top: 2rem;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     font-size: 1rem;
-    box-shadow: 0 -2px 8px rgba(33,147,176,0.07);
+    box-shadow: 0 -2px 8px rgba(228,58,71,0.07);
 }
